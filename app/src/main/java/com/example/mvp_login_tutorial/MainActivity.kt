@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity(),ILoginView{
         edit_email=edt_email
         edit_password=edt_password
 
-        //Init
+        //Init Presenter
         loginPresenter=LoginPresenter(this)
 
-        //Event
+        //Event / OnClickListener
 
 //        btnLogin.apply { setOnClickListener { loginPresenter.onLogin(edit_email.text.toString(),edit_password.text.toString()) } }
         btnLogin.setOnClickListener { loginPresenter.onLogin(edit_email.text.toString(),edit_password.text.toString()) }

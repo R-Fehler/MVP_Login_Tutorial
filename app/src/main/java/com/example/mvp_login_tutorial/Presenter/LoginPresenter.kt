@@ -2,8 +2,9 @@ package com.example.mvp_login_tutorial.Presenter
 
 import com.example.mvp_login_tutorial.Model.User
 import com.example.mvp_login_tutorial.View.ILoginView
-
-class LoginPresenter(var loginView: ILoginView) : ILoginPresenter {
+// hier braucht man den Handle zur View in der MainActivity.
+// die private var loginView muss vom Typ sein des Interfaces. (nicht MainActivity)
+class LoginPresenter(private var loginView: ILoginView) : ILoginPresenter {
 
 
     override fun onLogin(email: String, password: String) {
